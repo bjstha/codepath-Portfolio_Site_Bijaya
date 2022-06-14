@@ -1,6 +1,12 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body
 {
-  background-color: #ffffff;
+  background-color: #e9eef5;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -9,29 +15,36 @@ body
   letter-spacing: 0.5px;
 }
 
-h1, h2, h3, h4
+h1, h2, h3, h4, p
 {
-  line-height: 1.4;
+  line-height: 1.3;
+  color: #030810;
+  font-family: 'Merriweather', sans-serif;
 }
 h1
 {
-  font-size: 2.75em;
+  font-size: 2.4em;
   font-weight: 700;
 }
 h2
 {
-  font-size: 2.25em;
+  font-size: 1.8em;
   font-weight: 700;
 }
 h3
 {
-  font-size: 1.75em;
-  font-weight: 400;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 h4
 {
   font-size: 1.35em;
   font-weight: 400;
+}
+p
+{
+  font-size: 16px;
+  color: #35393f;
 }
 img
 {
@@ -44,7 +57,7 @@ a
 }
 a:hover, a:focus
 {
-  color: ##cc6540;
+  color: #009cff;
   text-decoration: underline;
 }
 a:visited
@@ -55,32 +68,261 @@ a:active
 {
   color: #994c30;
 }
-.button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
-  color: #ffffff; /* needed to override the default link color */
-  font-weight: 700;
-  padding: 10px 24px;
-  border-radius: 3px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
-}
-.button:hover
+/* Styling Layout */
+.container
 {
-  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  /* height: 80px; */
+  margin: 0 auto;
+}
+header
+{
+  padding: 24px 0;
+}
+header > .container > a
+{
+  color: #009cff;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 18px;
   text-decoration: none;
 }
-.button.contact
+nav ul li
 {
-  background-color: transparent;
-  color: #ff7f50;
-  text-transform: uppercase;
-  border: 2px solid #ff7f50;
+  display: inline-block;
+  letter-spacing: 0;
+  padding: 0px 24px;
 }
-.button.contact:hover
+nav ul li a
 {
-  background-color: #ff7f50;
+  color: #030810;
+  font-weight: 600;
+}
+.text_content
+{
+  width: 45%;
+  margin-top: 24px;
+}
+.text_content > p
+{
+  margin: 8px 0 48px;
+  line-height: 1.8;
+  color: #0f2241;
+  font-size: 16px;
+  font-weight: 500;
+}
+.text_content > a
+{
+  font-weight: 600;
+}
+.profile_pic
+{
+  width: 50%;
+  margin-top: 24px;
+}
+.btn
+{
+  padding: 12px 32px;
+  background: #009cff;
   color: #ffffff;
-  opacity: 1;
-  transition: 0.9s opacity;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.btn:hover
+{
+  background: #030810;
+  color: #fff;
+  text-decoration: none;
+}
+/* Styling Work */
+.work_container
+{
+  width: 80%;
+  margin: 0 auto;
+  padding: 104px 0 0;
+}
+.cs1, .cs2
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 104px;
+}
+.work_container h2
+{
+  margin-bottom: 24px;
+  letter-spacing: 0;
+  border-bottom: 0.1px solid #e9eef5;
+}
+.cs1 > .profile_pic
+{
+  margin-top: 104px;
+}
+.cs1 > .text_content > h3
+{
+  margin-bottom: 16px;
+}
+.cs1 > .text_content > h3 > span
+{
+  color: #F78324;
+}
+.cs2 > .text_content
+{
+  width: 45%;
+}
+.cs2 > .profile_pic
+{
+  width: 50%;
+}
+.cs2 > .text_content > h3 > span
+{
+  color: #F2655C;
+}
+.cs2
+{
+  margin-bottom: 156px;
+}
+.cs3 > .text_content
+{
+  width: 40%;
+}
+.cs3 > .profile_pic
+{
+  width: 58%;
+}
+.cs3
+{
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+.cs3 > .text_content > h3 > span
+{
+  color: #EE6F2C;
+}
+/* Styling footer */
+.contact_container
+{
+  width: 80%;
+  margin: 0 auto;
+}
+.contact_container h2
+{
+  margin-bottom: 24px;
+  letter-spacing: 0;
+  border-bottom: 0.1px solid #e9eef5;
+}
+.contact_container > p
+{
+  margin: 8px 0 32px;
+  line-height: 1.8;
+  color: #0f2241;
+  font-size: 16px;
+  font-weight: 500;
+}
+.contact_container > p > a
+{
+  color: #ff5722;
+}
+.contact_container > .btn
+{
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid #163361;
+  color: #163361;
+}
+.contact_container > .btn:hover
+{
+  background: #030810;
+  color: #fff;
+  transition: 0.5s;
+}
+.contact_container > ul
+{
+  margin: 40px 0;
+}
+.contact_container > ul li
+{
+  display: inline-block;
+  margin: 0 8px;
+}
+.contact_container > ul li a
+{
+  list-style: none;
+  color: #ffffff;
+}
+.fa
+{
+  width: 32px;
+  height: 32px;
+  background-color: #163361;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.contact_container > .copyright
+{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  display: block;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 600;
+  border-top: 0.1px solid #e9eef5;
+  padding: 12px 0;
+}
+
+/* Styling About page */
+
+.mid_container
+{
+  width: 80%;
+  margin: 0 auto;
+  padding: 104px 0;
+}
+.col2_container
+{
+  width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
+  padding: 32px 0 0;
+}
+.col2_container > .skills h3
+{
+  margin-bottom: 12px;
+}
+.col2_container > .tools h3
+{
+  margin-bottom: 12px;
+}
+.col2_container > .skills > ul
+{
+  list-style: none;
+}
+.col2_container > .skills > ul li
+{
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f2241;
+  font-family: 'Merriweather', sans-serif;
+}
+.col2_container > .tools > ul
+{
+  list-style: none;
+}
+.col2_container > .tools > ul li
+{
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f2241;
+  font-family: 'Merriweather', sans-serif;
+}
+.col2_container > .tools
+{
+  margin-left: 296px;
 }
