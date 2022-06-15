@@ -75,7 +75,6 @@ a:active
   align-items: center;
   justify-content: space-between;
   width: 80%;
-  /* height: 80px; */
   margin: 0 auto;
 }
 header
@@ -138,6 +137,7 @@ nav ul li a
   text-decoration: none;
 }
 /* Styling Work */
+
 .work_container
 {
   width: 80%;
@@ -204,6 +204,7 @@ nav ul li a
   color: #EE6F2C;
 }
 /* Styling footer */
+
 .contact_container
 {
   width: 80%;
